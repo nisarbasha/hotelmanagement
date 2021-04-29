@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sample view</title>
+     {% load static %}
+    <link href="{% static 'styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+{%csrf_token%}
+<center>
+    <h1>Booking Details</h1>
+
+</center>
+<table bgcolor="blue" border="5" width="100%">
+    <thead>
+    <th>NAME</th>
+    <th>No. of Adults</th>
+    <th>Name of Adults</th>
+    <th>No. of Childrens</th>
+    <th>Name of Childrens</th>
+    <th>MOBILE NUMBER</th>
+    <th>Check- in DATE</th>
+    <th>Check-out date</th>
+    <th>Room number</th>
+    </thead>
+    {% for i in details %}
+    <tr>
+    <td>{{i.name}}</td>
+    <td>{{i.no_adults}}</td>
+    <td>{{i.name_adults}}</td>
+    <td>{{i.no_child}}</td>
+    <td>{{i.name_child}}</td>
+    <td>{{i.phone_num}}</td>
+    <td>{{i.check_in_date}}</td>
+    <td>{{i.check_out_date}}</td>
+    <td>{{i.room_no}}</td>
+        </tr>
+    {% endfor %}
+
+</table><br><br>
+
+
+</body>
+</html>

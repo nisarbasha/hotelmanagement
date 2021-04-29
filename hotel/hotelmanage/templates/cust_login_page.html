@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cust_login_page</title>
+     {% load static %}
+    <link href="{% static 'styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body bgcolor="#85C1E9 ">
+<center><h1> CUSTOMER LOGIN </h1>
+   <div class="myDiv">
+    <form action=" " method="POST">
+        {% csrf_token %}
+        Enter your username:<input id="your username" type="text" name="your username"><br><br>
+        Enter your password:<input id="your password" type="password" name="your password"><br><br>
+        <input type="submit" value="signin" name="signin">
+        <input type="reset" value="cancel" name="cancel">
+        <br><br>
+        <input type="submit" value="Goto Home" name="goto home" id="goto home">
+    </form>
+        </div>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>mgmtloginpage</title>
+     {% load static %}
+    <link href="{% static 'styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body bgcolor="#2ECC71">
+<center><h1> MANAGEMENT LOGIN </h1>
+    <div class="myDiv">
+    <form action="" method="POST">
+        {% csrf_token %}
+        Enter username:<input id="username" type="text" name="username"><br><br>
+        Enter password:<input id="password" type="password" name="password"><br><br>
+        <input type="submit" value="signin" name="signin">
+        <input type="reset" value="cancel" name="cancel"><br><br>
+    </form>
+    </div>
+</center>
+
+</body>
+</html>

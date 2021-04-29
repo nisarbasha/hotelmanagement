@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>room_booking</title>
+     {% load static %}
+    <link href="{% static 'styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body bgcolor="#1ABC9C">
+<center><h1>Book Your Room</h1>
+    <div class="myDiv">
+    <form action="" method="POST">
+        {% csrf_token %}
+                    Name:           <input id="cust_name" type="text" name="cust_name"><br><br>
+        Number of Adults:           <input id="no_of_adults" type="number" name="no_of_adults"><br><br>
+        Enter the name of Adults:   <input id="name_of_adults" type="text" name="name_of_adults"><br><br>
+        Number of Childrens:        <input id="no_of_child" type="number" name="no_of_child"><br><br>
+        Enter the name of Childrens:<input id="name_of_child" type="text" name="name_of_child"><br><br>
+        Enter phone number:         <input id="phone" type="text" name="phone"><br><br>
+
+
+        check-in Date:<input id="check_in" type="datetime-local" name="check_in"><br><br>
+        check-out Date:<input id="check_out" type="datetime-local" name="check_out"><br><br>
+
+        <input type="submit" value="Confirm Booking" name="enquiry">
+        <input type="reset" value="Cancel" name="enquiry">
+    </form>
+    </div>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bill</title>
+     {% load static %}
+    <link href="{% static 'styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body bgcolor="pink">
+   <center><h1>ABC HOTELS</h1>
+   <h2>BILL INFORMATION</h2></center>
+    <table bgcolor="light green" border="5" width="100%" class="meta">
+    <thead>
+    <th>ROOM NUMBER</th>
+    <th>NAME</th>
+    <th>MOBILE NUMBER</th>
+    <th>CHECK_IN</th>
+    <th>CHECK_OUT</th>
+    <th>TOTAL AMOUNT TO BE PAID</th>
+    </thead>
+    {% for i in billing %}
+    <tr>
+    <td>{{i.room_no}}</td>
+    <td>{{i.b_name}}</td>
+    <td>{{i.mob_num}}</td>
+    <td>{{i.check_in}}</td>
+    <td>{{i.check_out}}</td>
+    <td>{{i.total}}</td>
+    </tr>
+    {% endfor %}
+
+</table><br><br>
+   <br><br><br>
+<a href="{% url 'previous'%}">Back</a>
+<a href="{% url 'Logout'%}" style="color: white">Logout</a>
+
+</body>
+</html>

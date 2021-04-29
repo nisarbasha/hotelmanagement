@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cust_home_page</title>
+     {% load static %}
+    <link href="{% static 'styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body bgcolor="#A569BD ">
+<center>
+<div class="myDiv">
+    <hr>
+    <form action=" " method="POST">
+        {% csrf_token %}
+        <input type="submit" value="CLICK HERE TO BOOK THE ROOM" name="book_room" id="book_room"> <br><br>
+        <input type="submit" value="CLICK HERE TO VIEW DETAILS" name="details" id="details"> <br><br>
+        <input type="submit" value="CLICK HERE TO GENERATE BILL" name="bill" id="bill"> <br><br>
+
+        <input type="submit" value="LOGOUT" name="logout" id="logout">
+
+
+    </form>
+        </div>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sample</title>
+     {% load static %}
+    <link href="{% static 'styles.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body bgcolor="pink">
+ <form action=" " method="POST">
+        {% csrf_token %}
+     <div class="myDiv">
+Name:<input id="room_no" type="text" name="room_no"><br><br>
+   <input type="submit" value="CLICK HERE TO VIEW DETAILS" name="bill" id="bill"> <br><br>
+
+     </div>
+ </form>
+</body>
+</html>
